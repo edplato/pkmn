@@ -12,14 +12,14 @@ class App extends Component {
 
   componentDidMount() {
     this.props.getPokemonList();
-  }
-
-  render() {
     window.onscroll = () => {
       if (this.props.fetching === false && (window.innerHeight + window.scrollY + 500) >= document.body.offsetHeight) {
         this.props.getPokemonList(this.props.next);
       }
     };
+  }
+
+  render() {
     return (
       <div>
         <h1 className="site-heading"><span><img className="site-heading-pokeball" src='https://vignette.wikia.nocookie.net/mcleodgaming/images/3/3f/PBall_old.png'/></span> pkmn - The Pokedex for Pokemon</h1>
@@ -37,5 +37,6 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, actionCreators)(App);
 
 App.propTypes = {
-  pokemon: PropTypes.array.isRequired
+  pokemon: PropTypes.array.isRequired,
+  fetching: PropTypes.bool.isRequired
 };

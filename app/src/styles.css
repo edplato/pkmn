@@ -4,10 +4,6 @@ body {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   background: #fff;
-  background: -webkit-linear-gradient(90deg, #fff, #eafbfd);
-  background: -o-linear-gradient(90deg, #fff, #eafbfd);
-  background: -moz-linear-gradient(90deg, #fff, #eafbfd);
-  background: linear-gradient(90deg, #fff, #eafbfd);
 }
 
 .site-heading {
@@ -22,7 +18,7 @@ body {
 .grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, 1fr);
 }
 
 /* POKEMON DISPLAY */
@@ -104,12 +100,16 @@ body {
 }
 
 .loading-site {
-  font-size: 4.5em;
+  font-size: 2.5em;
 }
 
 .loading-pokemon {
   margin-top: 50px;
   font-size: 2.5em;
+}
+
+.loading-image {
+  width: 200px;
 }
 
 @keyframes loading {

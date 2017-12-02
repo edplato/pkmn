@@ -2399,10 +2399,6 @@ function changeFetchingStatus(fetching) {
 
 // API FUNCTIONS
 
-function getPokemonData(url) {
-  return _axios2.default.get(url);
-}
-
 function getPokemonDetails(url, dispatch) {
   return _axios2.default.get(url).then(function (response) {
     dispatch(addPokemonDetails(response.data));
@@ -21969,7 +21965,7 @@ exports = module.exports = __webpack_require__(79)(undefined);
 
 
 // module
-exports.push([module.i, "/* MAIN APP */\r\n\r\nbody {\r\n  font-family: 'Raleway', sans-serif;\r\n  text-transform: uppercase;\r\n  background: #fff;\r\n  background: -webkit-linear-gradient(90deg, #fff, #eafbfd);\r\n  background: -o-linear-gradient(90deg, #fff, #eafbfd);\r\n  background: -moz-linear-gradient(90deg, #fff, #eafbfd);\r\n  background: linear-gradient(90deg, #fff, #eafbfd);\r\n}\r\n\r\n.site-heading {\r\n  text-align: center;\r\n  letter-spacing: 2px;\r\n}\r\n\r\n.site-heading-pokeball {\r\n  width: 22px;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-gap: 20px;\r\n  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));\r\n}\r\n\r\n/* POKEMON DISPLAY */\r\n\r\n.pokemon-container {\r\n  justify-content: center;\r\n  align-items: center;\r\n  display: flex;\r\n}\r\n\r\n.pokemon-header-name {\r\n  margin: 2px 10px 0 0;\r\n  text-align: center;\r\n}\r\n\r\n.pokemon-image {\r\n  margin-right: 10px;\r\n  cursor: pointer;\r\n  height: 150px;\r\n  width: 150px;\r\n  border: 1px solid #444;\r\n  border-radius: 20%;\r\n  background-color: #f2f2f2;\r\n  -webkit-box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.79);\r\n  -moz-box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.79);\r\n  box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.79);\r\n  -webkit-transition: all 0.4s cubic-bezier(.25,.5,.75,1);\r\n  -o-transition: all 0.4s cubic-bezier(.25,.5,.75,1);\r\n  transition: all 0.4s cubic-bezier(.25,.5,.75,1);\r\n}\r\n\r\n.pokemon-image:hover {\r\n  background-color: #ffffff;\r\n  -webkit-box-shadow: -4px 4px 10px 2px rgba(0, 0, 0, 0.69);\r\n  -moz-box-shadow: -4px 4px 10px 2px rgba(0, 0, 0, 0.69);\r\n  box-shadow: -4px 4px 10px 2px rgba(0, 0, 0, 0.69);\r\n}\r\n\r\n.pokemon-details-box {\r\n  height: 150px;\r\n  margin-bottom: 20px;\r\n  display: grid;\r\n  grid-template-rows: repeat(3, 1fr);\r\n  align-items: center;\r\n  width: 100%;\r\n  border-radius: 15px;\r\n  margin-left: -50px;\r\n  padding-left: 50px;\r\n  z-index: -1;\r\n}\r\n\r\n.box-outline {\r\n  border: 1px solid #444;\r\n}\r\n\r\n.pokemon-details-box-name {\r\n  border-top-right-radius: 15px;\r\n  font-size: 2em;\r\n  font-weight: 700;\r\n  margin-left: -40px;\r\n  padding: 10px 0 10px 45px;\r\n  background: #222;\r\n  color: #fff;\r\n}\r\n\r\n.pokemon-details-label {\r\n  font-weight: 700;\r\n}\r\n\r\n/* LOADING */\r\n\r\n.table-loading-container {\r\n  text-align: center;\r\n}\r\n\r\n.loading {\r\n  animation: loading 1500ms infinite ease;\r\n  font-weight: 700;\r\n}\r\n\r\n.loading-site {\r\n  font-size: 4.5em;\r\n}\r\n\r\n.loading-pokemon {\r\n  margin-top: 50px;\r\n  font-size: 2.5em;\r\n}\r\n\r\n@keyframes loading {\r\n  0% {\r\n    color: #222;\r\n  }\r\n  50% {\r\n    color: #ad200a;\r\n  }\r\n  100% {\r\n    color: #222;\r\n  }\r\n}\r\n", ""]);
+exports.push([module.i, "/* MAIN APP */\r\n\r\nbody {\r\n  font-family: 'Raleway', sans-serif;\r\n  text-transform: uppercase;\r\n  background: #fff;\r\n}\r\n\r\n.site-heading {\r\n  text-align: center;\r\n  letter-spacing: 2px;\r\n}\r\n\r\n.site-heading-pokeball {\r\n  width: 22px;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-gap: 20px;\r\n  grid-template-columns: repeat(auto-fit, 1fr);\r\n}\r\n\r\n/* POKEMON DISPLAY */\r\n\r\n.pokemon-container {\r\n  justify-content: center;\r\n  align-items: center;\r\n  display: flex;\r\n}\r\n\r\n.pokemon-header-name {\r\n  margin: 2px 10px 0 0;\r\n  text-align: center;\r\n}\r\n\r\n.pokemon-image {\r\n  margin-right: 10px;\r\n  cursor: pointer;\r\n  height: 150px;\r\n  width: 150px;\r\n  border: 1px solid #444;\r\n  border-radius: 20%;\r\n  background-color: #f2f2f2;\r\n  -webkit-box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.79);\r\n  -moz-box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.79);\r\n  box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.79);\r\n  -webkit-transition: all 0.4s cubic-bezier(.25,.5,.75,1);\r\n  -o-transition: all 0.4s cubic-bezier(.25,.5,.75,1);\r\n  transition: all 0.4s cubic-bezier(.25,.5,.75,1);\r\n}\r\n\r\n.pokemon-image:hover {\r\n  background-color: #ffffff;\r\n  -webkit-box-shadow: -4px 4px 10px 2px rgba(0, 0, 0, 0.69);\r\n  -moz-box-shadow: -4px 4px 10px 2px rgba(0, 0, 0, 0.69);\r\n  box-shadow: -4px 4px 10px 2px rgba(0, 0, 0, 0.69);\r\n}\r\n\r\n.pokemon-details-box {\r\n  height: 150px;\r\n  margin-bottom: 20px;\r\n  display: grid;\r\n  grid-template-rows: repeat(3, 1fr);\r\n  align-items: center;\r\n  width: 100%;\r\n  border-radius: 15px;\r\n  margin-left: -50px;\r\n  padding-left: 50px;\r\n  z-index: -1;\r\n}\r\n\r\n.box-outline {\r\n  border: 1px solid #444;\r\n}\r\n\r\n.pokemon-details-box-name {\r\n  border-top-right-radius: 15px;\r\n  font-size: 2em;\r\n  font-weight: 700;\r\n  margin-left: -40px;\r\n  padding: 10px 0 10px 45px;\r\n  background: #222;\r\n  color: #fff;\r\n}\r\n\r\n.pokemon-details-label {\r\n  font-weight: 700;\r\n}\r\n\r\n/* LOADING */\r\n\r\n.table-loading-container {\r\n  text-align: center;\r\n}\r\n\r\n.loading {\r\n  animation: loading 1500ms infinite ease;\r\n  font-weight: 700;\r\n}\r\n\r\n.loading-site {\r\n  font-size: 2.5em;\r\n}\r\n\r\n.loading-pokemon {\r\n  margin-top: 50px;\r\n  font-size: 2.5em;\r\n}\r\n\r\n.loading-image {\r\n  width: 200px;\r\n}\r\n\r\n@keyframes loading {\r\n  0% {\r\n    color: #222;\r\n  }\r\n  50% {\r\n    color: #ad200a;\r\n  }\r\n  100% {\r\n    color: #222;\r\n  }\r\n}\r\n", ""]);
 
 // exports
 
@@ -22576,18 +22572,18 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.props.getPokemonList();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
       var _this2 = this;
 
+      this.props.getPokemonList();
       window.onscroll = function () {
         if (_this2.props.fetching === false && window.innerHeight + window.scrollY + 500 >= document.body.offsetHeight) {
           _this2.props.getPokemonList(_this2.props.next);
         }
       };
+    }
+  }, {
+    key: 'render',
+    value: function render() {
       return _react2.default.createElement(
         'div',
         null,
@@ -22618,7 +22614,8 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, actionCreators)(App)
 
 
 App.propTypes = {
-  pokemon: _propTypes2.default.array.isRequired
+  pokemon: _propTypes2.default.array.isRequired,
+  fetching: _propTypes2.default.bool.isRequired
 };
 
 /***/ }),
@@ -23567,7 +23564,7 @@ var PokeTable = function (_Component) {
             { className: 'loading loading-site' },
             'Loading Pokedex...'
           ),
-          _react2.default.createElement('img', { src: 'http://www.freeiconspng.com/uploads/pokemon-pikachu-png-2.png' })
+          _react2.default.createElement('img', { className: 'loading-image', src: 'http://www.freeiconspng.com/uploads/pokemon-pikachu-png-2.png' })
         ) : this.props.pokemonList.map(function (pokemon, i) {
           return _react2.default.createElement(_Pokemon2.default, { pokemon: pokemon, key: i });
         })

@@ -10,7 +10,7 @@ export default class PokeTable extends Component {
         {this.props.pokemonList.length === 0 ?
           <div className="table-loading-container">
             <div className="loading loading-site">Loading Pokedex...</div>
-            <img src='http://www.freeiconspng.com/uploads/pokemon-pikachu-png-2.png' />
+            <img className="loading-image" src='http://www.freeiconspng.com/uploads/pokemon-pikachu-png-2.png' />
           </div>
           :
           this.props.pokemonList.map((pokemon, i) => {

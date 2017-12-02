@@ -33,10 +33,6 @@ export function changeFetchingStatus(fetching) {
 
 // API FUNCTIONS
 
-function getPokemonData(url) {
-  return axios.get(url);
-}
-
 function getPokemonDetails(url, dispatch) {
   return axios.get(url)
     .then((response) => {
